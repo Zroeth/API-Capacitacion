@@ -1,0 +1,10 @@
+USE [CAPACITACION]
+GO
+ALTER TABLE Clientes
+ADD Banco NVARCHAR(255),
+    Contrato INT;
+GO
+ALTER TABLE Clientes
+ADD CONSTRAINT FK_Clientes_Banco FOREIGN KEY (Banco)
+REFERENCES Bancos (Nombre);
+GO
